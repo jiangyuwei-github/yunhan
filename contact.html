@@ -1,0 +1,74 @@
+<html>
+<head>
+	<meta charset='UTF-8'>
+	<meta name='viewport' content='width=device-width, minimum-scale=1,maximum-scale=1'>
+	<title>云汉创新</title>
+	<script type='text/javascript' src='js/jquery.min.js'></script>
+	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=QxYO2KGzj3GEv2Zc2AvbxxgQ"></script>
+	<link rel="stylesheet" type="text/css" href="css/base.css" />
+	<script type='text/javascript' src='js/base.js'></script>
+	
+</head>
+<body>
+
+<div class="main">
+	<div class="header clearfix">
+		<div class="header_box">
+			<a href="###" class="logo"><img src="images/logo.png"></a>
+			<div class="nav clearfix">
+				<a href="index.html">首页</a>
+				<a href="production.html">作品</a>
+				<a href="about.html">关于</a>
+				<a href="contact.html" class="active">联系</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="Contactbaner">
+		<div class="img"><img src="images/cBaner.jpg"></div>
+	</div>
+
+	<div class="contact_content">
+		<div class="contact_content_box">
+			<img src="images/contact_img.png">
+			<div id="allmap"></div>
+		</div>
+	</div>
+	<div class="content_us">
+		<img src="images/aImg_04.png">
+	</div>
+	<div class="footer">
+		<div class="footer_box clearfix">
+			<div class="leftBtn">
+				<a href="javascript:void(0)" class="wb">
+					<img src="images/wb.png">
+				</a>
+				<a href="javascript:void(0)" class="wei">
+					<!-- <img src="images/wei.png" class="tb"> -->
+					<div class="img"><img src="images/wm.png"></div>
+				</a>
+				<a href="javascript:void(0)" class="qq">
+					
+					<div class="img"><img src="images/qm.png"></div>
+				</a>
+			</div>
+			<div class="rightBtn">
+				<a href="javascript:void(0)"><img src="images/top.png"></a>
+			</div>
+		</div>	
+	</div>
+	<div class="copyright"><img src="images/copyright.png"></div>
+</div>
+
+</body>
+<script type="text/javascript">
+	$(function(){
+		var map = new BMap.Map("allmap");
+			var point = new BMap.Point(116.703019,40.179071);
+			map.centerAndZoom(point, 15);
+			var marker = new BMap.Marker(point);  // 创建标注
+			map.addOverlay(marker);               // 将标注添加到地图中
+			marker.setAnimation(BMAP_ANIMATION_BOUNCE); //跳动的动画
+	})
+</script>
+</html>
