@@ -10,7 +10,6 @@
 
 .swiper-container-no-flexbox .swiper-slide {
 	float: left;
-	background: red;
 }
 
 .swiper-container-vertical>.swiper-wrapper {
